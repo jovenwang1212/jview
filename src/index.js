@@ -21,8 +21,10 @@ const install = function (Vue) {
   // 可能还有其他的全局注册操作，例如指令、过滤器等
 }
 
+window.Vue.use({install})
+
 // 导出插件
 export default {
   version: '1.0.0',
-  install
+  ...components
 }

@@ -14,11 +14,6 @@ module.exports = {
     filename: 'bundle.js',
     path: resolve('dist')
   },
-  resolve: {
-    alias: {
-      'jview': path.resolve(__dirname, '../dist/jview.js'),
-    }
-  },
   module: {
     rules: [
       {
@@ -35,6 +30,10 @@ module.exports = {
     })
   ],
   devServer: {
-    port: 8080
+    port: 8080,
+    // 静态资源目录
+    static: {
+      directory: resolve('../dist')
+    }
   }
 }
